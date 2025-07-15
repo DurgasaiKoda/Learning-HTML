@@ -1,0 +1,73 @@
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(5, 100px);
+    border: 3px solid lightgray;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    column-gap: 100px;
+    grid-template-areas: 
+        ". . . area4 ."
+        "area1 area2 area3 . ."
+        ". . . area5 area6";
+
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service1 {
+    grid-area: area1;
+    background-color: red;
+    position: relative;
+}
+
+
+.service1-arrow {
+    position: absolute;
+    left: 100px;
+}
+.service5-arrow {
+    position: absolute;
+    left: 100px;
+}
+.service2-arrow {
+    position: absolute;
+    left: 100px;
+}
+
+.service4-right-up-arrow {
+    position: absolute;
+    right: 92px;
+    top: 30px
+}
+
+.service2 {
+    grid-area: area2;
+    background-color: green;
+    position: relative;
+}
+.service3 {
+    grid-area: area3;
+    background-color: green;
+}
+.service4 {
+    grid-area: area4;
+    background-color: green;
+    position: relative;
+}
+.service5 {
+    grid-area: area5;
+    background-color: green;
+    position: relative;
+}
+.service6 {
+    grid-area: area6;
+    background-color: red;
+    position: relative;
+}
+

@@ -1,0 +1,153 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/grid.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="services service2 flex-center">
+        <p>Altea/ADFS/1A</p>
+        <img
+          width="100"
+          height="30"
+          src="images/arrow.png"
+          alt="arrow"
+          class="service2-arrow" />
+      </div>
+      <div class="services service6 flex-center">ED&A Redshift</div>
+      <div class="services service5 flex-center">
+        <p>Data Lake</p>
+        <img
+          width="100"
+          height="30"
+          src="images/arrow.png"
+          alt="arrow"
+          class="service5-arrow" />
+      </div>
+      <div class="services service3 flex-center">
+        <p>CDSA</p>
+      </div>
+      <div class="services service1 flex-center">
+        <p>AIS</p>
+        <img
+          width="100"
+          height="30"
+          src="images/arrow.png"
+          alt="arrow"
+          class="service1-arrow" />
+      </div>
+      <div class="services service4 flex-center">
+        <p>BOSS</p>
+        <img
+          width="70"
+          src="images/right-and-up.png"
+          alt="arrow"
+          class="service4-right-up-arrow" />
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flowchart with SVG Arrows</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 40px;
+    }
+
+   
+    /* .flow {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      grid-template-rows: auto auto;
+      gap: 50px 60px;
+      justify-items: center;
+      align-items: center;
+      position: relative;
+    }  */
+ 
+     .box {
+      padding: 15px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .red { background-color: #d32f2f; }
+    .green { background-color: #388e3c; }  */
+
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .arrow {
+      stroke: black;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+
+    .m-bottom-10 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flow">
+  <!-- Row 1 -->
+  <div class="box green" style="grid-column: 4; grid-row: 1;">BOSS</div>
+  <div class="box red" style="grid-column: 1; grid-row: 1;">AIS</div>
+  <div class="box green" style="grid-column: 2; grid-row: 1;">Altea/ADFS/1A</div>
+  <div class="box green" style="grid-column: 3; grid-row: 1;">CDSA</div>
+  <div></div> <!-- Empty space
+
+  <!-- Row 2 -->
+  <div></div><div></div>
+  <div></div>
+  <div class="box green" style="grid-column: 4; grid-row: 2;">Data Lake</div>
+  <div class="box red" style="grid-column: 5; grid-row: 2;">ED&A Redshift</div> 
+
+  <!-- SVG arrows -->
+  <svg>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+      </marker>
+    </defs>
+
+    <!-- AIS -> Altea -->
+    <line x1="80" y1="60" x2="250" y2="60" class="arrow"/>
+
+    <line x1="80" y1="60" x2="350" y2="60" class="arrow"/>
+
+    <!-- Altea -> CDSA -->
+    <line x1="330" y1="60" x2="500" y2="60" class="arrow"/>
+
+    <!-- CDSA -> BOSS -->
+    <!-- <line x1="580" y1="0" x2="750" y2="0" class="arrow m-bottom-10"/> -->
+    <path d="M580,40 L580,0 L750,0" class="arrow"/>
+
+    <!-- CDSA -> Data Lake (vertical+horizontal) -->
+    <path d="M580,100 L580,160 L750,160" class="arrow"/>
+
+    <!-- Data Lake -> ED&A Redshift -->
+    <line x1="830" y1="160" x2="1000" y2="160" class="arrow"/>
+  </svg>
+</div>
+
+</body>
+</html>

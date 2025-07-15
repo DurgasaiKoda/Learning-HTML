@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        td,th,table,tr{
+            border:1px solid black;
+            border-collapse: collapse;
+            
+
+        }
+        .footer{
+            text-align:start;
+
+        }
+        td,th{
+            padding: 50px 80px 50px 80px;
+        }
+        th{
+            background-color: blue;
+            color:white;
+            font-size: 30px;
+            font-family: 'Chiron Sung HK';
+        }
+        td{
+            background-color: green;
+            font-size: large;
+            color:white;
+        }
+        body{
+            width:90%;
+            height:90vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        /* .list{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- <div class="list">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+    </div> -->
+   <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Marks</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>Alice</td>
+            <td> 24</td>
+            <td>98</td>
+        </tr>
+        <tr>
+            <td>Heidi</td>
+            <td>26</td>
+            <td>98</td>
+        </tr>
+        <tr>
+            <td>Nobita</td>
+            <td>23</td>
+            <td>95</td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+        <tr >
+            <th colspan="2">Average Marks</th>
+            <th class="footer">97</th>
+        </tr>
+    </tfoot>
+   </table>
+
+</body>
+</html>
